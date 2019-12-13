@@ -1,9 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-export default function Cell() {
+const Cell = ({onClick, value, displayWinner}) => {
+const highlightWinner= "cell" + (displayWinner ? "highlight" : "")
+
     return (
-        <div>
-            stuff here
-        </div>
+        <>
+        <button className={highlightWinner} onClick={onClick}>{value}</button>
+        </>
     )
 }
+
+export default Cell
