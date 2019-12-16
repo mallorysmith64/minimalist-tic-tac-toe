@@ -11,7 +11,7 @@ const GameBoard = () => {
     const winner = winningInfo.winner;
   
     const winnerHighlight = winningInfo.line;
-    let status;
+    let status
     if (winner) {
       status = "Hurray the winner is " + winner;
     } else if (winningInfo.isDraw) {
@@ -32,7 +32,7 @@ const renderCells = (i) => {
   />
 }
 
-function playAgain() {
+const playAgain = () => {
   setCells([[], [], []]);
 }
 
@@ -63,7 +63,7 @@ function playAgain() {
       </div>
     </section>
 
-    <section className="reset-btn">
+    <section className="play-again-btn">
       <li>
         <button onClick={playAgain}>Play Again</button>
       </li>
