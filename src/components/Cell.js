@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 const Cell = ({onClick, value, displayWinner}) => {
 const highlightWinner= "cell" + (displayWinner ? "highlight" : "")

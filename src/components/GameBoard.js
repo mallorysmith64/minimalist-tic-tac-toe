@@ -1,10 +1,24 @@
 import React, { useState } from 'react'
 import Cell from './Cell'
+import WinningLogic from './WinningLogic'
 
 const GameBoard = () => {
-  const [cells, setCells] = useState([0,0,0, 0,0,0, 0,0,0])
+  //fill with null otherwise x's and o's will be displayed without ever being clicked
+  const [cells, setCells] = useState(Array(9).fill(null));
   const [XNext, setXNext] = useState(true)
-  const status = "Next Player is "
+
+  const winningInfo = WinningLogic(cells);
+    const winner = winningInfo.winner;
+  
+    const winnerHighlight = winningInfo.line;
+    let status;
+    if (winner) {
+      status = "Hurray the winner is " + winner;
+    } else if (winningInfo.isDraw) {
+      status = "It's a Draw";
+    } else {
+      status = "Next Player is " + (XNext ? "X" : "O");
+    }
 
 const renderCells = (i) => {
   return <Cell onClick={() => {
@@ -14,8 +28,10 @@ const renderCells = (i) => {
     setCells(nextCell)
   }}
   value={cells[i]}
+  highlightWinner={winnerHighlight && winnerHighlight.includes(i)}
   />
 }
+
 
   return (
     <>
