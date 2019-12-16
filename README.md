@@ -1,4 +1,11 @@
 # Minimalist Tic Tac Toe
 
-This was created December 13, 2019. 
-The game "minimalist tic-tac-toe" is a work in progress but will be coming out soon. :-)
+**Welcome to minimalist tic-tac-toe!**
+
+To play minimalist tic tac toe immediately in the browser: </br>
+https://minimalist-tic-tac-toe-mallorysmith64.netlify.com/
+
+To run this project locally: </br>
+git clone https://github.com/mallorysmith64/minimalist-tic-tac-toe.git
+cd minimalist-tic-tac-toe
+yarn start

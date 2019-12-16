@@ -4,20 +4,20 @@ import WinningLogic from './WinningLogic'
 
 const GameBoard = () => {
   //fill with null otherwise x's and o's will be displayed without ever being clicked
-  const [cells, setCells] = useState(Array(9).fill(null));
+  const [cells, setCells] = useState(Array(9).fill(null))
   const [XNext, setXNext] = useState(true)
 
-  const winningInfo = WinningLogic(cells);
-    const winner = winningInfo.winner;
+  const winningInfo = WinningLogic(cells)
+    const winner = winningInfo.winner
   
-    const winnerHighlight = winningInfo.line;
+    const winnerHighlight = winningInfo.line
     let status
     if (winner) {
-      status = "Hurray the winner is " + winner;
+      status = "Hurray the winner is " + winner
     } else if (winningInfo.isDraw) {
-      status = "It's a Draw";
+      status = "It's a Draw"
     } else {
-      status = "Next Player is " + (XNext ? "X" : "O");
+      status = "Next Player is " + (XNext ? "X" : "O")
     }
 
 const renderCells = (i) => {
@@ -33,7 +33,7 @@ const renderCells = (i) => {
 }
 
 const playAgain = () => {
-  setCells([[], [], []]);
+  setCells([[], [], []])
 }
 
   return (
