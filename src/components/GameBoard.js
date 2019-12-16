@@ -32,6 +32,9 @@ const renderCells = (i) => {
   />
 }
 
+function playAgain() {
+  setCells([[], [], []]);
+}
 
   return (
     <>
@@ -58,6 +61,12 @@ const renderCells = (i) => {
         {renderCells(7)}
         {renderCells(8)}
       </div>
+    </section>
+
+    <section className="reset-btn">
+      <li>
+        <button onClick={playAgain}>Play Again</button>
+      </li>
     </section>
     </>
   )
