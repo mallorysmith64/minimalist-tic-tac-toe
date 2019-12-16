@@ -3,7 +3,6 @@ import Cell from './Cell'
 import WinningLogic from './WinningLogic'
 
 const GameBoard = () => {
-  //fill with null otherwise x's and o's will be displayed without ever being clicked
   const [cells, setCells] = useState(Array(9).fill(null))
   const [XNext, setXNext] = useState(true)
 
