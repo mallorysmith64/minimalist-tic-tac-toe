@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import Cell from './Cell'
 import WinningLogic from './WinningLogic'
 
+//testing: commits not being counted for weeks now
+
 const GameBoard = () => {
   const [cells, setCells] = useState(Array(9).fill(null))
   const [XNext, setXNext] = useState(true)
